@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stake Sui Mind</title>
+    <link rel="stylesheet" href="staking.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="Design_2.png" alt="Sui Mind Logo" class="logo-image" />
+          Sui Mind
+        </a>
+        <ul class="nav-links">
+          <li><a href="search.html">Mind Search</a></li>
+          <li><a href="staking.html" class="active">Mind Yield</a></li>
+          <li><a href="swap.html">Mind Swap</a></li>
+          <li><a href="exchange.html">Mind Exchange</a></li>
+        </ul>
+        <button class="wallet-button" onclick="connectWallet()">
+          Connect Wallet
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Stake Your Sui Mind Tokens</h1>
+        <p>Earn rewards by staking your tokens with us.</p>
+      </section>
+
+      <section class="staking-info">
+        <h2>Staking Information</h2>
+        <p>Here's how you can stake your tokens:</p>
+        <div class="staking-steps">
+          <p><strong>Step 1:</strong> Connect your wallet.</p>
+          <p><strong>Step 2:</strong> Select the amount to stake.</p>
+          <p><strong>Step 3:</strong> Watch your rewards accumulate.</p>
+        </div>
+      </section>
+
+      <section class="staking-form">
+        <div class="coming-soon-ribbon">COMING SOON</div>
+        <h2>Stake Now</h2>
+        <form id="stakingForm">
+          <label for="amount">Amount to Stake:</label>
+          <input type="number" id="amount" name="amount" min="0" step="any" />
+          <button type="submit">Stake</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Sui Mind. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function connectWallet() {
+        alert("Wallet connection functionality coming soon!");
+      }
+    </script>
+  </body>
+</html>

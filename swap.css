@@ -1,0 +1,285 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: #252525;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #141414;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.3);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #00a3ff;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px #00a3ff;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #87cefa;
+  text-shadow: 0 0 5px #87cefa;
+}
+
+.wallet-button {
+  background-color: #00a3ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #00a3ff;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.wallet-button:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #007acc;
+}
+
+/* Main Swap Container */
+main {
+  flex: 1; /* Push footer to bottom */
+  padding: 100px 20px 20px; /* Adjust for fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swap-container {
+  max-width: 400px;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 163, 255, 0.3);
+  text-align: center;
+}
+
+/* Swap Header */
+.swap-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.swap-tabs button {
+  background-color: transparent;
+  border: 1px solid #404040;
+  color: #e0e0e0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swap-tabs button.active {
+  background-color: #00a3ff;
+  color: #fff;
+  border-color: #00a3ff;
+}
+
+.swap-tabs button:hover {
+  background-color: #007acc;
+  color: white;
+}
+
+/* Swap Card */
+.swap-card {
+  background: #141414;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.1);
+}
+
+.swap-input {
+  margin-bottom: 20px;
+}
+
+.swap-input label {
+  display: block;
+  text-align: left;
+  color: #87cefa;
+  margin-bottom: 5px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  border: 1px solid #404040;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.input-row input {
+  border: none;
+  background: transparent;
+  color: white;
+  flex-grow: 1;
+  font-size: 1.2em;
+  outline: none;
+}
+
+.input-row .token-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.input-row .token-select img {
+  width: 24px;
+  height: 24px;
+}
+
+.swap-arrow {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.swap-arrow button {
+  background: #00a3ff;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swap-arrow button:hover {
+  background-color: #007acc;
+}
+
+/* Swap Button */
+.connect-wallet {
+  background-color: #00a3ff;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #00a3ff;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: 20px;
+}
+
+.connect-wallet:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #141414;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.3);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .swap-container {
+    width: 90%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .navbar, .header, .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container, .agent-grid, .swap-container, .staking-form {
+        width: 100%;
+    }
+
+    .navbar .nav-links, .footer p {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1, .hero h2, .hero p {
+        font-size: 1.5rem;
+    }
+
+    .wallet-button, .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .grid-container .feature, .agent-card, .swap-card, .staking-form {
+        margin: 10px 0;
+    }
+}

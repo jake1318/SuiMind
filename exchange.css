@@ -1,0 +1,261 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  font-family: "Orbitron", sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  background-color: #141414;
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #00a3ff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 10px #00a3ff;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #87cefa;
+  text-shadow: 0 0 5px #87cefa;
+}
+
+.logo-image {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #87cefa;
+  text-shadow: 0 0 5px #87cefa;
+}
+
+.nav-links a.active {
+  color: #00a3ff;
+  text-shadow: 0 0 10px #00a3ff;
+}
+
+.wallet-button {
+  background-color: #00a3ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 0 5px #00a3ff;
+}
+
+.wallet-button:hover {
+  background-color: #007acc;
+  box-shadow: 0 0 10px #007acc;
+  transform: scale(1.05);
+}
+
+/* Main content styles */
+main {
+  flex: 1;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #00a3ff;
+  text-shadow: 0 0 10px #00a3ff;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #e0e0e0;
+}
+
+/* Agent Marketplace Section */
+.agent-marketplace {
+  padding: 20px;
+  text-align: center;
+}
+
+.agent-marketplace h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #87cefa;
+}
+
+.agent-marketplace p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+/* Agent Grid */
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Agent Card Styles with Fixed Height */
+.agent-card {
+  position: relative;
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px; /* Fixed height for consistent layout */
+}
+
+.agent-card img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.agent-card h3 {
+  font-size: 1.5em;
+  color: #00a3ff;
+  margin-bottom: 10px;
+}
+
+.agent-card p {
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Pushes the content upwards */
+}
+
+.agent-card button {
+  background-color: #00a3ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.agent-card button:hover {
+  background-color: #007acc;
+}
+
+/* Diagonal Banner */
+.agent-card::before {
+  content: "COMING SOON";
+  position: absolute;
+  top: 50%;
+  left: -25%;
+  transform: rotate(-45deg);
+  background-color: #00a3ff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 50px;
+  z-index: 1;
+  opacity: 0.9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  background-color: #141414;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .navbar, .header, .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container, .agent-grid, .swap-container, .staking-form {
+        width: 100%;
+    }
+
+    .navbar .nav-links, .footer p {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1, .hero h2, .hero p {
+        font-size: 1.5rem;
+    }
+
+    .wallet-button, .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .grid-container .feature, .agent-card, .swap-card, .staking-form {
+        margin: 10px 0;
+    }
+}

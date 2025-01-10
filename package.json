@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@mysten/sui": "^1.18.0",
+    "@simplewebauthn/types": "^12.0.0",
+    "@suiet/wallet-kit": "^0.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

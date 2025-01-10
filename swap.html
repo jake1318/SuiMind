@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Swap</title>
+    <link rel="stylesheet" href="swap.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="Design_2.png" alt="Sui Mind Logo" class="logo-image" />
+          Sui Mind
+        </a>
+        <ul class="nav-links">
+          <li><a href="search.html">Mind Search</a></li>
+          <li><a href="staking.html">Mind Yield</a></li>
+          <li><a href="swap.html" class="active">Mind Swap</a></li>
+          <li><a href="exchange.html">Mind Exchange</a></li>
+        </ul>
+        <button class="wallet-button" onclick="connectWallet()">
+          Connect Wallet
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="swap-container">
+        <!-- Swap Application -->
+        <div class="swap-tabs">
+          <button class="active">Swap</button>
+          <button>Limit</button>
+          <button>Send</button>
+          <button>Buy</button>
+        </div>
+        <div class="swap-card">
+          <div class="swap-input">
+            <label for="sell">Sell</label>
+            <div class="input-row">
+              <input type="number" id="sell" placeholder="0" />
+              <div class="token-select">
+                <img src="eth-icon.png" alt="ETH" />
+                <span>SUI</span>
+              </div>
+            </div>
+            <p class="usd-value"></p>
+          </div>
+          <div class="swap-arrow">
+            <button>⇅</button>
+          </div>
+          <div class="swap-input">
+            <label for="buy">Buy</label>
+            <div class="input-row">
+              <input type="number" id="buy" placeholder="0" />
+              <div class="token-select">
+                <button>Select Token</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="connect-wallet">Swap</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2025 Sui Mind. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="swap.js"></script>
+    <script>
+      function connectWallet() {
+        alert("Wallet connection functionality coming soon!");
+      }
+    </script>
+  </body>
+</html>

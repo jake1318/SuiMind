@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sui Mind - AI Search</title>
+    <link rel="stylesheet" href="search.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="Design_2.png" alt="Sui Mind Logo" class="logo-image" />
+          Sui Mind
+        </a>
+        <ul class="nav-links">
+          <li><a href="search.html" class="active">Mind Search</a></li>
+          <li><a href="staking.html">Mind Yield</a></li>
+          <li><a href="swap.html">Mind Swap</a></li>
+          <li><a href="exchange.html">Mind Exchange</a></li>
+        </ul>
+        <button class="wallet-button" onclick="connectWallet()">
+          Connect Wallet
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="ai-search">
+        <h2>AI Powered Search</h2>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search with AI" />
+          <button id="searchButton">Search</button>
+        </div>
+        <div id="results"></div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Sui Mind. All rights reserved.</p>
+    </footer>
+    <script src="search.js"></script>
+    <script>
+      function connectWallet() {
+        alert("Wallet connection functionality coming soon!");
+      }
+    </script>
+  </body>
+</html>
